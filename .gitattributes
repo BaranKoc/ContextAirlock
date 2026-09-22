@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.gitattributes text eol=lf
+
+# Agent yönlendirme aynaları checkout sonrası da byte-identical kalır.
+AGENTS.md text eol=lf
+CLAUDE.md text eol=lf
