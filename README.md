@@ -33,6 +33,20 @@ Instead of treating access as a single yes-or-no permission, ContextAirlock is d
 
 ## What the experience should feel like
 
+> [!NOTE]
+> This is the intended product flow. ContextAirlock is still in early design and prototyping; protected operation is not yet available for real or sensitive data.
+
+```mermaid
+flowchart TD
+    A["1. Choose the source"] --> B["2. Describe the outcome"]
+    B --> C["3. Review outgoing context"]
+    C --> D{"4. Approve the passage?"}
+    D -- "Needs changes" --> C
+    D -- "Approved" --> E["5. Agent works with approved context"]
+    E --> F["6. Validate the result locally"]
+    F --> G["7. Export a new artifact"]
+```
+
 1. **Choose the source**  
    Add the files relevant to the job rather than exposing a whole workspace.
 
